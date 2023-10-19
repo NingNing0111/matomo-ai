@@ -23,8 +23,19 @@
 
 ![](/doc/4.png)
 
-#### 接口
+### 使用方法
 
-- 本地访问：[http://localhost:端口号/swagger-ui.html](http://localhost:8888/swagger-ui.html)
-- 文档：[https://github.com/NingNing0111/matomo-ai/blob/master/doc/swagger%E6%8E%A5%E5%8F%A3%E6%96%87%E6%A1%A3.doc](https://github.com/NingNing0111/matomo-ai/blob/master/doc/swagger%E6%8E%A5%E5%8F%A3%E6%96%87%E6%A1%A3.doc)
+&emsp;下载Jar包，在Jar包所在目录执行下述命令：
+
+```text
+java -jar matomo-chatgpt.jar --server.port=端口号 --oneapi.api=你的oneapi网址 --oneapi.key=你的key
+```
+
+具体配置参考：[application.yml](https://github.com/NingNing0111/matomo-ai/blob/master/src/main/resources/application.yml)
+
+- 查看接口详情：[http://localhost:端口号/swagger.html]()
+- demo1页面：[http://localhost:端口号/index.html]()
+- demo2页面：[http://localhost:端口号/demo.html]()
+
+
 

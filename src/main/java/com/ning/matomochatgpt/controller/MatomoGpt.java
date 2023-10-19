@@ -100,7 +100,7 @@ public class MatomoGpt {
             messages.put("code","245");
             return messages;
 
-        } catch (JsonProcessingException e) {
+        } catch (Exception e) {
             e.printStackTrace();
             messages.put("message","Server handling exception.");
             messages.put("code","456");
@@ -116,7 +116,7 @@ public class MatomoGpt {
     @PostMapping("/oneapi")
     public Object oneApiSettings(
             @RequestParam(value = "api") String api,
-            @RequestParam(value = "key") List<String> keys
+            @RequestParam(value = "keys") List<String> keys
     ){
         configClient.setOneApiApi(api);
         configClient.setOneApiKey(keys);

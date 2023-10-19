@@ -40,7 +40,14 @@ public class MatomoClient {
         if(Objects.equals(apiName, com.ning.matomochatgpt.constant.MatomoApi.Actions.getApiName())){
             return new ActionsMethod(configClient,matomoRequestParam);
         }
+        if(Objects.equals(apiName,com.ning.matomochatgpt.constant.MatomoApi.PagePerformance.getApiName())){
+            return new PagePerformanceMethod(configClient,matomoRequestParam);
+        }
+        if(Objects.equals(apiName,com.ning.matomochatgpt.constant.MatomoApi.VisitFrequency.getApiName())){
+            return new VisitFrequencyMethod(configClient,matomoRequestParam);
+        }
         return null;
+
     }
 
     public static class Builder{

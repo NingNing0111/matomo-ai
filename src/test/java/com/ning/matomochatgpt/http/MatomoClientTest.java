@@ -25,8 +25,6 @@ public class MatomoClientTest {
 
     @Test
     public void clientTest() throws JsonProcessingException {
-        configClient.setMatomoUrl("https://matomo.mnzdna.xyz/");
-        configClient.setMatomoToken("4418e0de9******4b03565025");
 
         MatomoRequestParam matomoRequestParam = MatomoRequestParam.builder()
                 .method("VisitsSummary.get")

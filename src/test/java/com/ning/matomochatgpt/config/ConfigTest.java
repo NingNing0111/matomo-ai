@@ -46,7 +46,5 @@ public class ConfigTest {
         configClient.setChatSystemPrompt("Hello！");
         ChatConfig chatConfig = configClient.getChatConfig();
         System.out.println(chatConfig);
-
-
     }
 }

@@ -42,6 +42,7 @@ public abstract class MatomoApi {
 
     public abstract MatomoResponse api() throws JsonProcessingException;
     protected String post(ConfigClient configClient,MatomoRequestParam matomoRequestParam) throws JsonProcessingException{
+        matomoRequestParam.setMethod(matomoRequestParam.getMethod() + ".get");
         Map<String,Object> params = JSON.parseObject(JSON.toJSONString(matomoRequestParam), new TypeReference<>() {});
         log.info("请求地址:{}",configClient.getMatomoUrl());
         log.info("请求参数:{}",params);

@@ -21,7 +21,7 @@ public class MatomoChatgptApplication {
     @Bean
     public OkHttpClient okHttpClient(){
         HttpLoggingInterceptor httpLoggingInterceptor = new HttpLoggingInterceptor(new OpenAILogger());
-        httpLoggingInterceptor.setLevel(HttpLoggingInterceptor.Level.HEADERS);
+        httpLoggingInterceptor.setLevel(HttpLoggingInterceptor.Level.NONE);
         return new OkHttpClient.Builder()
                 .addInterceptor(httpLoggingInterceptor)
                 .connectTimeout(30, TimeUnit.SECONDS)
